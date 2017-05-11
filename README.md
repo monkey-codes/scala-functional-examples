@@ -32,3 +32,10 @@ change amount: 4
 solutions: [1+1+1+1, 2+2, 1+1+2]
 function return value: 3 - (3 possible solutions)
 ```
+
+## Functional Sets
+Sets can be defined as a function. In other words you could write a function that represents the values included in a set, this is called a *characteristic function*. For example an integer set can be defined by a function that returns a boolean value based on whether a given integer exists in the set.
+```
+type Set = Int => Boolean
+```
+The first step is to [define a set](src/main/scala/week2/funsets/FunSets.scala) ([Test Suite](src/test/scala/week2/funsets/FunSetSuite.scala) ) that can only contain 1 integer a `singletonSet` then define functions to build larger sets from the `singletonSet` namely: `union`, `intersect` and `diff`. Finally implement the ability to query the set and to transform it via a `forall` and `map` function.
